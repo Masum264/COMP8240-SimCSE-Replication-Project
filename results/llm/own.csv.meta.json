@@ -1,0 +1,10 @@
+{
+  "backend": "hf",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "load_4bit": true,
+  "both_orders": true,
+  "prompt_version": "v1",
+  "prompt_sha": "604f40f60eb1",
+  "date": "2026-11-06",
+  "n": 102
+}

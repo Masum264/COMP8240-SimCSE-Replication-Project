@@ -1,0 +1,15 @@
+torch
+transformers>=4.30
+datasets>=2.14
+accelerate
+scikit-learn
+scipy
+pandas
+numpy
+requests
+beautifulsoup4
+krippendorff
+prettytable
+# optional
+# bitsandbytes   # 4-bit loading of the 7B judge on a 16 GB GPU (--load_4bit)
+# anthropic      # only for --backend anthropic

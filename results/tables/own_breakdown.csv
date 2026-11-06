@@ -1,0 +1,8 @@
+split,group,mean,count
+band,high,1.5320512820512822,52
+band,low,0.44,25
+band,medium,1.0933333333333333,25
+blind=False,simcse_sim,0.6860137323260587,30
+blind=False,llm_score,0.8416851935722539,30
+blind=True,simcse_sim,0.4956195379666046,72
+blind=True,llm_score,0.6457866283269728,72

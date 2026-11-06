@@ -1,0 +1,4 @@
+set,n,diff_llm_minus_simcse,ci_lo,ci_hi,boot_share_diff_le_0,judge_order_spearman
+stsb_sample,300,0.046,0.013,0.081,0.0038,0.898
+biosses,100,0.17,0.076,0.278,0.0,0.851
+own,102,0.136,0.002,0.281,0.0236,0.717

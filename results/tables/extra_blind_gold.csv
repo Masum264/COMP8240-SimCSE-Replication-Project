@@ -1,0 +1,3 @@
+scorer,spearman_vs_rater2+3
+LLM judge,0.678
+SimCSE,0.529

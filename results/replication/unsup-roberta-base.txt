@@ -1,0 +1,537 @@
+2026-11-05 23:39:21,196 : NumExpr defaulting to 2 threads.
+2026-11-05 23:39:21,496 : connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=None socket_options=None
+2026-11-05 23:39:21,503 : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ec82133cc20>
+2026-11-05 23:39:21,503 : start_tls.started ssl_context=<ssl.SSLContext object at 0x7ec821a6bbb0> server_hostname='huggingface.co' timeout=None
+2026-11-05 23:39:21,509 : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ec82135c050>
+2026-11-05 23:39:21,509 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:21,509 : send_request_headers.complete
+2026-11-05 23:39:21,509 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:21,510 : send_request_body.complete
+2026-11-05 23:39:21,510 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:21,742 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:21 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"508-Ob6hvdZfemR09sVu3E9F3CId2Bc"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13a9-540047c32964400d5e5c4b85;dca1a56a-4f07-49ca-9b0d-fee364be6a5b'), (b'RateLimit', b'"api";r=479;t=23'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'gu9-OcOBNY7dEKpQn8SHn97cTqJRL7C1x7J3jSogkGFWXuFRq5eH6g=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:21,743 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base "HTTP/1.1 200 OK"
+2026-11-05 23:39:21,743 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:21,743 : receive_response_body.complete
+2026-11-05 23:39:21,743 : response_closed.started
+2026-11-05 23:39:21,743 : response_closed.complete
+2026-11-05 23:39:21,750 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:21,750 : send_request_headers.complete
+2026-11-05 23:39:21,751 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:21,751 : send_request_body.complete
+2026-11-05 23:39:21,751 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:21,980 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:21 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13a9-342960fa5b65125a3e376cd9;1f5598c3-4153-4688-a3d9-4433673576c7'), (b'RateLimit', b'"resolvers";r=2970;t=23'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'TaoYBjxJup7xeAECNTLVIYhT5rHq8ogI0bviGmgQBhP8ANJT6qC-5A=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:21,980 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:21,980 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:21,981 : receive_response_body.complete
+2026-11-05 23:39:21,981 : response_closed.started
+2026-11-05 23:39:21,981 : response_closed.complete
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-05 23:39:21,981 : Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-05 23:39:21,983 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:21,984 : send_request_headers.complete
+2026-11-05 23:39:21,984 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:21,984 : send_request_body.complete
+2026-11-05 23:39:21,984 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:22,211 : receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'318'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:22 GMT'), (b'Location', b'/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/config.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fconfig.json=&etag=%221fea9288894a52b71247b59cf5145be7f4b41ee8%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13aa-0d61203e3e34c5f96b9b28bb;0bc6675c-0207-402a-8e77-9e008fc0bd23'), (b'RateLimit', b'"resolvers";r=2969;t=22'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-Size', b'741'), (b'X-Linked-ETag', b'"1fea9288894a52b71247b59cf5145be7f4b41ee8"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'XaoCd5YkDX6rZMoqICz6Q3QNkdfGBp7TfymcEIv4Q3gX8Zf8DKMrDQ=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:22,212 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-05 23:39:22,212 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:22,212 : receive_response_body.complete
+2026-11-05 23:39:22,212 : response_closed.started
+2026-11-05 23:39:22,213 : response_closed.complete
+2026-11-05 23:39:22,213 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:22,213 : send_request_headers.complete
+2026-11-05 23:39:22,214 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:22,214 : send_request_body.complete
+2026-11-05 23:39:22,214 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:22,219 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'741'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 20 Sep 2026 02:29:34 GMT'), (b'ETag', b'"1fea9288894a52b71247b59cf5145be7f4b41ee8"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aaf450e-7caf40e47b4ade4e1edf27ea'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'RGEPP4k-gml-p4gq25dwq_EQqJPAX6G5pdJxsHHnBlRYwnoz3jb23A=='), (b'Age', b'4050588'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:22,219 : HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/config.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fconfig.json=&etag=%221fea9288894a52b71247b59cf5145be7f4b41ee8%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:22,219 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:22,219 : receive_response_body.complete
+2026-11-05 23:39:22,219 : response_closed.started
+2026-11-05 23:39:22,219 : response_closed.complete
+2026-11-05 23:39:22,220 : Attempting to acquire lock 139398015605392 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/1fea9288894a52b71247b59cf5145be7f4b41ee8.lock
+2026-11-05 23:39:22,221 : Lock 139398015605392 acquired on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/1fea9288894a52b71247b59cf5145be7f4b41ee8.lock
+2026-11-05 23:39:22,222 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:22,222 : send_request_headers.complete
+2026-11-05 23:39:22,222 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:22,222 : send_request_body.complete
+2026-11-05 23:39:22,222 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:22,440 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'741'), (b'Connection', b'keep-alive'), (b'Date', b'Sat, 31 Oct 2026 00:01:55 GMT'), (b'ETag', b'"1fea9288894a52b71247b59cf5145be7f4b41ee8"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6ae52ff3-568fb9b96ea5287a2c556d83;9bd7cd06-b3e5-4be1-b6c4-294f17ae82ce'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'6XUz4-e3v4_sxer-mu1MHIl83EqKMR3L9GtXvrEdcB1YlxLVhO02Hg=='), (b'Age', b'517047'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:22,440 : HTTP Request: GET https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/config.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fconfig.json=&etag=%221fea9288894a52b71247b59cf5145be7f4b41ee8%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:22,441 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:22,441 : receive_response_body.complete
+2026-11-05 23:39:22,441 : response_closed.started
+2026-11-05 23:39:22,441 : response_closed.complete
+2026-11-05 23:39:22,443 : Attempting to release lock 139398015605392 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/1fea9288894a52b71247b59cf5145be7f4b41ee8.lock
+2026-11-05 23:39:22,443 : Lock 139398015605392 released on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/1fea9288894a52b71247b59cf5145be7f4b41ee8.lock
+2026-11-05 23:39:24,131 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,131 : send_request_headers.complete
+2026-11-05 23:39:24,131 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,131 : send_request_body.complete
+2026-11-05 23:39:24,131 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,363 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:24 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ac-229f11be3b2069a85b50653c;2ff99708-b093-4d2c-8368-ffc258840965'), (b'RateLimit', b'"resolvers";r=2968;t=20'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'lfAaI3Bbkckp4DXvMB2ZlKQyX4i7U9BPi_rBKlydkTt8nefIUajDJw=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:24,363 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:24,364 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,364 : receive_response_body.complete
+2026-11-05 23:39:24,364 : response_closed.started
+2026-11-05 23:39:24,364 : response_closed.complete
+2026-11-05 23:39:24,366 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,366 : send_request_headers.complete
+2026-11-05 23:39:24,366 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,366 : send_request_body.complete
+2026-11-05 23:39:24,366 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,598 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:24 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ac-560d841a42cc25b46400095d;9eb5b67c-6dd4-4e30-a66f-d3f0e80e93fd'), (b'RateLimit', b'"resolvers";r=2967;t=20'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'iA6svnxFcyI66BsSQTbcERyCvOn49N9R9itt_TCMlzBy8gr7ybWEGA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:24,598 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:24,598 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,599 : receive_response_body.complete
+2026-11-05 23:39:24,599 : response_closed.started
+2026-11-05 23:39:24,599 : response_closed.complete
+2026-11-05 23:39:24,601 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,601 : send_request_headers.complete
+2026-11-05 23:39:24,601 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,601 : send_request_body.complete
+2026-11-05 23:39:24,601 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,843 : receive_response_headers.complete return_value=(b'HTTP/1.1', 302, b'Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'1003'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:24 GMT'), (b'Location', b'https://us.gcp.cdn.hf.co/xet-bridge-us/621ffdc136468d709f17f008/66dec01503cc2982a120fddc612c6db50d4480cbaeebefea1790dfac6c2b5418?X-Xet-Cas-Uid=public&user_id=public&xip=4qGy8uZNrVE&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1793925564&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5nY3AuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjIxZmZkYzEzNjQ2OGQ3MDlmMTdmMDA4LzY2ZGVjMDE1MDNjYzI5ODJhMTIwZmRkYzYxMmM2ZGI1MGQ0NDgwY2JhZWViZWZlYTE3OTBkZmFjNmMyYjU0MThcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZ1c2VyX2lkPXB1YmxpYyZ4aXA9NHFHeTh1Wk5yVkUmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFcG9jaFRpbWUiOjE3OTM5MjU1NjR9fX1dfQ__&Signature=MEUCIQCWi4ofO3l%7EZ5z9IxSy57u-38pzMZGhf5m67S8ECbRWfQIgakdfkFVsZDT1L1FCr4BAY7T%7ELdOeDcIMu5IkeZuCsDw_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ac-36f9a52b3055c18558ba6799;a913749e-0e5a-4316-b842-898b3b58a697'), (b'RateLimit', b'"resolvers";r=2966;t=20'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Linked-Size', b'498651911'), (b'X-Linked-ETag', b'"25ff6c2ce68194d2b5636bc19f4f5556318fbd9636ff72f332e714e976deabcf"'), (b'Cache-Control', b'no-store'), (b'X-Xet-Hash', b'66dec01503cc2982a120fddc612c6db50d4480cbaeebefea1790dfac6c2b5418'), (b'Link', b'<https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/xet-read-token/db28710348cf9f33a2be25c505f98f0fbbbfe768>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/66dec01503cc2982a120fddc612c6db50d4480cbaeebefea1790dfac6c2b5418>; rel="xet-reconstruction-info"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'7yZMajg4GX3hm26Q03iqoRa9qnHDuGocxMt556i9hDuKlypNIssAdA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:24,844 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-11-05 23:39:24,844 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:24,844 : receive_response_body.complete
+2026-11-05 23:39:24,844 : response_closed.started
+2026-11-05 23:39:24,844 : response_closed.complete
+2026-11-05 23:39:24,846 : Attempting to acquire lock 139397698205520 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/25ff6c2ce68194d2b5636bc19f4f5556318fbd9636ff72f332e714e976deabcf.lock
+2026-11-05 23:39:24,846 : Lock 139397698205520 acquired on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/25ff6c2ce68194d2b5636bc19f4f5556318fbd9636ff72f332e714e976deabcf.lock
+2026-11-05 23:39:24,856 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:24,856 : send_request_headers.complete
+2026-11-05 23:39:24,856 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:24,856 : send_request_body.complete
+2026-11-05 23:39:24,856 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:25,091 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'483'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:24 GMT'), (b'ETag', b'W/"1e3-ouvsHZjj5yvnt9n+MxRELnQf6eM"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ac-65eaf12a0a3913c6215ecca3;f9a34bcf-c5e6-477c-a6dc-bd837e2b5d75'), (b'RateLimit', b'"api";r=478;t=20'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Xet-Cas-Url', b'https://cas-server.xethub.hf.co'), (b'X-Xet-Token-Expiration', b'1793922864'), (b'X-Xet-Access-Token', b'eyJhbGciOiJIUzI1NiJ9.eyJyZXBvSWQiOiI2MjFmZmRjMTM2NDY4ZDcwOWYxN2YwMDgiLCJ1c2VySWQiOiJwdWJsaWMiLCJhY2Nlc3MiOiJSRUFEIiwiZm9yY2VTM0xpbmsiOmZhbHNlLCJoZkNkblRpZXIiOiJ1bmF1dGhlbnRpY2F0ZWQiLCJyZXBvU3RvcmFnZVR5cGUiOiJnaXQiLCJpYXQiOjE3OTM5MjE5NjQsImp0aSI6ImI2YmI0YTVhLTdjNjUtNDY4Yy1hYWUyLTUxNzA0MWU5Y2VlOSIsImV4cCI6MTc5MzkyMjg2NCwiaXNzIjoiaHR0cHM6Ly9odWdnaW5nZmFjZS5jbyJ9.2_OcjhtHxgmlL5AjDQUnLFCBcMCC30wUuxLYAqPhNhM'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'8decIXZxVlB22BfwhTPJgBcZmaBlRaJQ0J7z0hXGZ-4dF8ww-mCxBw=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:25,091 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/xet-read-token/db28710348cf9f33a2be25c505f98f0fbbbfe768 "HTTP/1.1 200 OK"
+2026-11-05 23:39:25,092 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:25,092 : receive_response_body.complete
+2026-11-05 23:39:25,093 : response_closed.started
+2026-11-05 23:39:25,093 : response_closed.complete
+2026-11-05 23:39:34,553 : Attempting to acquire lock 139397698207440 on /root/.cache/huggingface/hub/blobs/66/66dec01503cc2982a120fddc612c6db50d4480cbaeebefea1790dfac6c2b5418.lock
+2026-11-05 23:39:34,553 : Lock 139397698207440 acquired on /root/.cache/huggingface/hub/blobs/66/66dec01503cc2982a120fddc612c6db50d4480cbaeebefea1790dfac6c2b5418.lock
+2026-11-05 23:39:35,121 : Attempting to release lock 139397698207440 on /root/.cache/huggingface/hub/blobs/66/66dec01503cc2982a120fddc612c6db50d4480cbaeebefea1790dfac6c2b5418.lock
+2026-11-05 23:39:35,121 : Lock 139397698207440 released on /root/.cache/huggingface/hub/blobs/66/66dec01503cc2982a120fddc612c6db50d4480cbaeebefea1790dfac6c2b5418.lock
+2026-11-05 23:39:35,122 : Attempting to release lock 139397698205520 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/25ff6c2ce68194d2b5636bc19f4f5556318fbd9636ff72f332e714e976deabcf.lock
+2026-11-05 23:39:35,122 : Lock 139397698205520 released on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/25ff6c2ce68194d2b5636bc19f4f5556318fbd9636ff72f332e714e976deabcf.lock
+2026-11-05 23:39:35,123 : close.started
+2026-11-05 23:39:35,124 : close.complete
+2026-11-05 23:39:35,124 : connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=10 socket_options=None
+2026-11-05 23:39:35,129 : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ec80e48b890>
+2026-11-05 23:39:35,130 : start_tls.started ssl_context=<ssl.SSLContext object at 0x7ec821a6bbb0> server_hostname='huggingface.co' timeout=10
+2026-11-05 23:39:35,135 : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ec821a23bb0>
+2026-11-05 23:39:35,135 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:35,136 : send_request_headers.complete
+2026-11-05 23:39:35,136 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:35,136 : send_request_body.complete
+2026-11-05 23:39:35,136 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:35,372 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:35 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b7-711167cc37398b3823aa5f21;22611e48-13ce-4529-bed9-d4983b72d211'), (b'RateLimit', b'"resolvers";r=2965;t=9'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'xOlo2MfLZvD7b1nd7kP5quFXnfJYFmGK8slt4UHog5PQlMeZHbMKRA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:35,373 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:35,373 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:35,373 : receive_response_body.complete
+2026-11-05 23:39:35,373 : response_closed.started
+2026-11-05 23:39:35,373 : response_closed.complete
+2026-11-05 23:39:35,375 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:35,375 : send_request_headers.complete
+2026-11-05 23:39:35,375 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:35,375 : send_request_body.complete
+2026-11-05 23:39:35,375 : receive_response_headers.started request=<Request [b'GET']>
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 26544.54it/s]
+2026-11-05 23:39:35,565 : connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=None socket_options=None
+2026-11-05 23:39:35,570 : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ec80df45480>
+2026-11-05 23:39:35,570 : start_tls.started ssl_context=<ssl.SSLContext object at 0x7ec821a6bbb0> server_hostname='huggingface.co' timeout=None
+2026-11-05 23:39:35,574 : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ec80e0afbf0>
+2026-11-05 23:39:35,574 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:35,575 : send_request_headers.complete
+2026-11-05 23:39:35,575 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:35,575 : send_request_body.complete
+2026-11-05 23:39:35,575 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:35,612 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:35 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"508-Ob6hvdZfemR09sVu3E9F3CId2Bc"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b7-6203f0905e8f52bd3a500e42;6816a702-4abf-49c3-9d87-942ed931be7b'), (b'RateLimit', b'"api";r=477;t=9'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'y7kUjGcQ3zL0IQ7go2YOnjQ4gmtuSXEr4b3f-CX8fUl4dNVoNoHS4w=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:35,613 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base "HTTP/1.1 200 OK"
+2026-11-05 23:39:35,613 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:35,614 : receive_response_body.complete
+2026-11-05 23:39:35,614 : response_closed.started
+2026-11-05 23:39:35,614 : response_closed.complete
+2026-11-05 23:39:35,615 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:35,615 : send_request_headers.complete
+2026-11-05 23:39:35,615 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:35,615 : send_request_body.complete
+2026-11-05 23:39:35,615 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:35,812 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:35 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"508-Ob6hvdZfemR09sVu3E9F3CId2Bc"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b7-475918cb5bc677e0253ab22b;fbde78b7-dba2-4873-9638-8a2a564f1386'), (b'RateLimit', b'"api";r=476;t=9'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'bDV5OekEm89DFf7zyJGves3ksx6-HytEIYnSyW9ADdT9g-2rtSAxFw=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:35,813 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base "HTTP/1.1 200 OK"
+2026-11-05 23:39:35,813 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:35,813 : receive_response_body.complete
+2026-11-05 23:39:35,813 : response_closed.started
+2026-11-05 23:39:35,813 : response_closed.complete
+2026-11-05 23:39:35,817 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:35,818 : send_request_headers.complete
+2026-11-05 23:39:35,818 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:35,818 : send_request_body.complete
+2026-11-05 23:39:35,818 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:35,904 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:35 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"548-H54zrV7kBrklYBNWSOxLeRHeIeA"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b7-1cb93656751cce43430e3944;69140beb-cb20-4018-a39c-f5b3fed25c5c'), (b'RateLimit', b'"api";r=475;t=9'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Total-Count', b'6'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'Ke9LGc2To_VNBXHkYagS3xR3wBYHF_ideQz0kATpO442t9NFHezkpg=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:35,905 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/commits/main "HTTP/1.1 200 OK"
+2026-11-05 23:39:35,905 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:35,906 : receive_response_body.complete
+2026-11-05 23:39:35,906 : response_closed.started
+2026-11-05 23:39:35,906 : response_closed.complete
+2026-11-05 23:39:35,907 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:35,907 : send_request_headers.complete
+2026-11-05 23:39:35,907 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:35,907 : send_request_body.complete
+2026-11-05 23:39:35,907 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,046 : receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'338'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:35 GMT'), (b'Location', b'/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/tokenizer_config.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Ftokenizer_config.json=&etag=%2291dab6b2937253a442aff043f0d2a5a092304284%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b7-3a88ccd16953f0d255523fe0;ec935b61-c811-43b6-b8ab-ed07a8b5f79c'), (b'RateLimit', b'"resolvers";r=2964;t=9'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'tokenizer_config.json; filename="tokenizer_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-Size', b'255'), (b'X-Linked-ETag', b'"91dab6b2937253a442aff043f0d2a5a092304284"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'NtprPYwFvseifQTj7td-P7ikuIr9c5yvQI94KZBP2gaDK3niVIqkFg=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,046 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-05 23:39:36,047 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,047 : receive_response_body.complete
+2026-11-05 23:39:36,047 : response_closed.started
+2026-11-05 23:39:36,047 : response_closed.complete
+2026-11-05 23:39:36,048 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,048 : send_request_headers.complete
+2026-11-05 23:39:36,048 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,048 : send_request_body.complete
+2026-11-05 23:39:36,048 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,053 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'255'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 25 Oct 2026 10:56:33 GMT'), (b'ETag', b'"91dab6b2937253a442aff043f0d2a5a092304284"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6adde061-45e5273d2b9f97ed2d18ad22'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'tokenizer_config.json; filename="tokenizer_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'6xh9b9CLq58IPeh0zXvl9EaWTm24N8cPa1UycWO6lT8_0raTiu58Hw=='), (b'Age', b'996183'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,054 : HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/tokenizer_config.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Ftokenizer_config.json=&etag=%2291dab6b2937253a442aff043f0d2a5a092304284%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:36,054 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,054 : receive_response_body.complete
+2026-11-05 23:39:36,054 : response_closed.started
+2026-11-05 23:39:36,054 : response_closed.complete
+2026-11-05 23:39:36,055 : Attempting to acquire lock 139397692675200 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/91dab6b2937253a442aff043f0d2a5a092304284.lock
+2026-11-05 23:39:36,055 : Lock 139397692675200 acquired on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/91dab6b2937253a442aff043f0d2a5a092304284.lock
+2026-11-05 23:39:36,056 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,056 : send_request_headers.complete
+2026-11-05 23:39:36,056 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,056 : send_request_body.complete
+2026-11-05 23:39:36,056 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,140 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:36 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"593-WUTKDy8uuelpyMOnsquFVByYJQA"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b8-32069d4660ddbfb816c06f23;dc0a82e1-54a7-4b61-94c1-2002caddca4a'), (b'RateLimit', b'"api";r=474;t=8'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'xtZEQr5DMWSL9GgC6sdPKH8EZyte_3no-K6llXgtOor74XugJUJcuQ=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,141 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/discussions?p=0 "HTTP/1.1 200 OK"
+2026-11-05 23:39:36,141 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,141 : receive_response_body.complete
+2026-11-05 23:39:36,141 : response_closed.started
+2026-11-05 23:39:36,141 : response_closed.complete
+2026-11-05 23:39:36,143 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,143 : send_request_headers.complete
+2026-11-05 23:39:36,143 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,143 : send_request_body.complete
+2026-11-05 23:39:36,143 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,283 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'255'), (b'Connection', b'keep-alive'), (b'Date', b'Tue, 03 Nov 2026 06:38:13 GMT'), (b'ETag', b'"91dab6b2937253a442aff043f0d2a5a092304284"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6ae98155-0e54e5594e67133d78fb06a1'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'tokenizer_config.json; filename="tokenizer_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'P1ieDUErrx1OOcRkWBaRUxHZDPoeCU0Wpe-_Hztv1U3rZu5y7vbfZA=='), (b'Age', b'234083'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,283 : HTTP Request: GET https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/tokenizer_config.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Ftokenizer_config.json=&etag=%2291dab6b2937253a442aff043f0d2a5a092304284%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:36,283 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,283 : receive_response_body.complete
+2026-11-05 23:39:36,283 : response_closed.started
+2026-11-05 23:39:36,283 : response_closed.complete
+2026-11-05 23:39:36,284 : Attempting to release lock 139397692675200 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/91dab6b2937253a442aff043f0d2a5a092304284.lock
+2026-11-05 23:39:36,284 : Lock 139397692675200 released on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/91dab6b2937253a442aff043f0d2a5a092304284.lock
+2026-11-05 23:39:36,287 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,288 : send_request_headers.complete
+2026-11-05 23:39:36,288 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,288 : send_request_body.complete
+2026-11-05 23:39:36,288 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,468 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:36 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"90d-F3QQaAen9xU5tK4U5WqtR1TjTss"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b8-3d18382b6e36682b7e39c364;6ad0f443-0eee-4577-ade1-1d71ce3d2268'), (b'RateLimit', b'"api";r=473;t=8'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Total-Count', b'7'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'Q-skLzNRanmMWIV8j2SmIzvES_dhorRrvfhtPoeDnJXn3_CHMLr8jA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,468 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/commits/refs%2Fpr%2F1 "HTTP/1.1 200 OK"
+2026-11-05 23:39:36,469 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,469 : receive_response_body.complete
+2026-11-05 23:39:36,469 : response_closed.started
+2026-11-05 23:39:36,469 : response_closed.complete
+2026-11-05 23:39:36,470 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,470 : send_request_headers.complete
+2026-11-05 23:39:36,470 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,471 : send_request_body.complete
+2026-11-05 23:39:36,471 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,525 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'64'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:36 GMT'), (b'ETag', b'W/"40-09f9IAqP13xarAhQxFS2W8rvRkM"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b8-0984a89c51c22c4800a0567d;6590b100-402f-4e48-b8c1-b2e688f9942b'), (b'RateLimit', b'"api";r=472;t=8'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'additional_chat_templates does not exist on "main"'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'dSTFX1yzS25hNE3KZ_1qP7ZJraX6tdn4roR1aZfYfcPJNG5LxtQTxA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,525 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:36,526 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,526 : receive_response_body.complete
+2026-11-05 23:39:36,526 : response_closed.started
+2026-11-05 23:39:36,526 : response_closed.complete
+2026-11-05 23:39:36,527 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,527 : send_request_headers.complete
+2026-11-05 23:39:36,527 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,527 : send_request_body.complete
+2026-11-05 23:39:36,527 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:36,769 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:36 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b8-498329515b24281a3830a9ba;77fb1949-288a-4658-835d-5aa7aca64055'), (b'RateLimit', b'"resolvers";r=2963;t=8'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'7283dcb73b7443787c1e4b81333b5c1dea7096b1'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'Yy7QEOFfPi-U17OmoLsxUJugRolNNBEpvupPOWMnnWur7AWXnXX5Qw=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,770 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/refs%2Fpr%2F1/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:36,770 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,770 : receive_response_body.complete
+2026-11-05 23:39:36,770 : response_closed.started
+2026-11-05 23:39:36,770 : response_closed.complete
+2026-11-05 23:39:36,772 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,772 : send_request_headers.complete
+2026-11-05 23:39:36,772 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,772 : send_request_body.complete
+2026-11-05 23:39:36,772 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,848 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:36 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"4c1-NJUpzykl7g9kRrnjSrs0wl38350"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b8-1ce6f21953dbec800b1d1929;68e6eab1-18fc-4426-bf8b-a62d32d30ad3'), (b'RateLimit', b'"api";r=471;t=8'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'CWjTTLa9HBNOLnFeyR-IzqlnBmm9STxrOuXRSYM6t2fQ1SxKrwFokQ=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:36,848 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-05 23:39:36,848 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:36,849 : receive_response_body.complete
+2026-11-05 23:39:36,849 : response_closed.started
+2026-11-05 23:39:36,849 : response_closed.complete
+2026-11-05 23:39:36,850 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,851 : send_request_headers.complete
+2026-11-05 23:39:36,851 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:36,851 : send_request_body.complete
+2026-11-05 23:39:36,851 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,076 : receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'316'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:36 GMT'), (b'Location', b'/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/vocab.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fvocab.json=&etag=%224ebe4bb3f3114daf2e4cc349f24873a1175a35d7%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b8-640783f133619bbc4c33e81a;1721bf18-4caa-4853-83aa-db899c49718b'), (b'RateLimit', b'"resolvers";r=2961;t=8'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'vocab.json; filename="vocab.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-Size', b'798293'), (b'X-Linked-ETag', b'"4ebe4bb3f3114daf2e4cc349f24873a1175a35d7"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'2irF833G5k-ObrkBShx78SogEJYlInXaL7LRPxzNdK5qbQ8jv00QDA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,076 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/vocab.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-05 23:39:37,077 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,077 : receive_response_body.complete
+2026-11-05 23:39:37,077 : response_closed.started
+2026-11-05 23:39:37,077 : response_closed.complete
+2026-11-05 23:39:37,078 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,078 : send_request_headers.complete
+2026-11-05 23:39:37,078 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,078 : send_request_body.complete
+2026-11-05 23:39:37,078 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,083 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'798293'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 25 Oct 2026 10:56:29 GMT'), (b'ETag', b'"4ebe4bb3f3114daf2e4cc349f24873a1175a35d7"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6adde05d-296fc6c74364f1e109195e08'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'vocab.json; filename="vocab.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'eqFozb2wHmxoWp5R8xQn1Cr9rOMbBThH3q55jaNpZ8DsCo81iXsyDA=='), (b'Age', b'996188'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,084 : HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/vocab.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fvocab.json=&etag=%224ebe4bb3f3114daf2e4cc349f24873a1175a35d7%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:37,084 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,084 : receive_response_body.complete
+2026-11-05 23:39:37,084 : response_closed.started
+2026-11-05 23:39:37,084 : response_closed.complete
+2026-11-05 23:39:37,085 : Attempting to acquire lock 139397692674896 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2026-11-05 23:39:37,085 : Lock 139397692674896 acquired on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2026-11-05 23:39:37,086 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:37,086 : send_request_headers.complete
+2026-11-05 23:39:37,086 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:37,086 : send_request_body.complete
+2026-11-05 23:39:37,086 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:37,121 : receive_response_headers.complete return_value=(b'HTTP/1.1', 302, b'Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'922'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:37 GMT'), (b'Location', b'https://us.gcp.cdn.hf.co/xet-bridge-us/621ffdc136468d709f17f008/1445ca615a6b2ecb9cacf33e4d47548cb7354b4a4a05edd42c9c70645fbbd8a9?user_id=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&xip=4qGy8uZNrVE&X-Xet-Cas-Uid=public&Expires=1793925577&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5nY3AuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjIxZmZkYzEzNjQ2OGQ3MDlmMTdmMDA4LzE0NDVjYTYxNWE2YjJlY2I5Y2FjZjMzZTRkNDc1NDhjYjczNTRiNGE0YTA1ZWRkNDJjOWM3MDY0NWZiYmQ4YTlcXD91c2VyX2lkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomeGlwPTRxR3k4dVpOclZFJlgtWGV0LUNhcy1VaWQ9cHVibGljIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFcG9jaFRpbWUiOjE3OTM5MjU1Nzd9fX1dfQ__&Signature=MEQCIEW2DVetT1ChXtmbIejCdf3IN-T2QiXWD8HpDnfO%7E6WWAiAjEVF3TGtftFqsZZf%7EBStPI8lUUxTVrtQQ1T47fXCyJg__&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b8-351c52bc14aae9d40e47b2c1;9a6165cc-a84d-4590-980f-c2fd800ece09'), (b'RateLimit', b'"resolvers";r=2962;t=8'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'7283dcb73b7443787c1e4b81333b5c1dea7096b1'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Linked-Size', b'498609108'), (b'X-Linked-ETag', b'"04c2f65f8eb4f52a5a3c7231816cd1409a4e5b08f8a3257e19f6096eb49dec05"'), (b'Cache-Control', b'no-store'), (b'X-Xet-Hash', b'1445ca615a6b2ecb9cacf33e4d47548cb7354b4a4a05edd42c9c70645fbbd8a9'), (b'Link', b'<https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/xet-read-token/7283dcb73b7443787c1e4b81333b5c1dea7096b1>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/1445ca615a6b2ecb9cacf33e4d47548cb7354b4a4a05edd42c9c70645fbbd8a9>; rel="xet-reconstruction-info"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'BWBvb2gPUqa6A_1Ggp_ZJacAMzvQfkyW7bQnIqtY5C6pwPE21ARU3A=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,121 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/refs%2Fpr%2F1/model.safetensors "HTTP/1.1 302 Found"
+2026-11-05 23:39:37,121 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,121 : receive_response_body.complete
+2026-11-05 23:39:37,121 : response_closed.started
+2026-11-05 23:39:37,121 : response_closed.complete
+2026-11-05 23:39:37,123 : Attempting to acquire lock 139397661814960 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/04c2f65f8eb4f52a5a3c7231816cd1409a4e5b08f8a3257e19f6096eb49dec05.lock
+2026-11-05 23:39:37,123 : Lock 139397661814960 acquired on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/04c2f65f8eb4f52a5a3c7231816cd1409a4e5b08f8a3257e19f6096eb49dec05.lock
+2026-11-05 23:39:37,124 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:37,124 : send_request_headers.complete
+2026-11-05 23:39:37,124 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:37,124 : send_request_body.complete
+2026-11-05 23:39:37,124 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:37,306 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Tue, 03 Nov 2026 06:38:25 GMT'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"4ebe4bb3f3114daf2e4cc349f24873a1175a35d7"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6ae98161-47305f3647e5e53c5ecab672'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'vocab.json; filename="vocab.json";'), (b'Vary', b'Origin,Accept-Encoding'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'n-rneN7IczyOhiJxL1BIVwI7CMZI7W_dQiWiDUzZVHMTA24dyOQxuw=='), (b'Age', b'234072'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,306 : HTTP Request: GET https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/vocab.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fvocab.json=&etag=%224ebe4bb3f3114daf2e4cc349f24873a1175a35d7%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:37,307 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:37,316 : receive_response_body.complete
+2026-11-05 23:39:37,316 : response_closed.started
+2026-11-05 23:39:37,316 : response_closed.complete
+2026-11-05 23:39:37,317 : Attempting to release lock 139397692674896 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2026-11-05 23:39:37,318 : Lock 139397692674896 released on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2026-11-05 23:39:37,319 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,319 : send_request_headers.complete
+2026-11-05 23:39:37,319 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,320 : send_request_body.complete
+2026-11-05 23:39:37,320 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,355 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'483'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:37 GMT'), (b'ETag', b'W/"1e3-MoG/qUbTwcbo68iIRpGO/Y+Nn0c"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b9-49b5c8fd18d6364e02e2d1f0;dbaa1ae3-fd1a-458a-8ee6-b70ec9b70165'), (b'RateLimit', b'"api";r=470;t=7'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Xet-Cas-Url', b'https://cas-server.xethub.hf.co'), (b'X-Xet-Token-Expiration', b'1793922877'), (b'X-Xet-Access-Token', b'eyJhbGciOiJIUzI1NiJ9.eyJyZXBvSWQiOiI2MjFmZmRjMTM2NDY4ZDcwOWYxN2YwMDgiLCJ1c2VySWQiOiJwdWJsaWMiLCJhY2Nlc3MiOiJSRUFEIiwiZm9yY2VTM0xpbmsiOmZhbHNlLCJoZkNkblRpZXIiOiJ1bmF1dGhlbnRpY2F0ZWQiLCJyZXBvU3RvcmFnZVR5cGUiOiJnaXQiLCJpYXQiOjE3OTM5MjE5NzcsImp0aSI6ImU4NGY5ZWFkLWVhZWQtNGZiYS1hZGNkLTQ0OGEyMmYyOWQyZCIsImV4cCI6MTc5MzkyMjg3NywiaXNzIjoiaHR0cHM6Ly9odWdnaW5nZmFjZS5jbyJ9.CLhXFXDp46hPyBLO-uqtB9bdcwP-Q26HkVTKPIchPVg'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'6-dh-i4JLRvy9FIE_mFvOZ1bq7jHUH4gFeOZ8613bwOGe_s1LqFl1A=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,355 : HTTP Request: GET https://huggingface.co/api/models/princeton-nlp/unsup-simcse-roberta-base/xet-read-token/7283dcb73b7443787c1e4b81333b5c1dea7096b1 "HTTP/1.1 200 OK"
+2026-11-05 23:39:37,355 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:37,355 : receive_response_body.complete
+2026-11-05 23:39:37,355 : response_closed.started
+2026-11-05 23:39:37,355 : response_closed.complete
+2026-11-05 23:39:37,555 : receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'316'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:37 GMT'), (b'Location', b'/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/merges.txt?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fmerges.txt=&etag=%226636bda4a1fd7a63653dffb22683b8162c8de956%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b9-739bbeb93b1dd6c862a499c3;9507820c-a664-4bcb-a290-d2c575df5ff5'), (b'RateLimit', b'"resolvers";r=2960;t=7'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'merges.txt; filename="merges.txt";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-Size', b'456356'), (b'X-Linked-ETag', b'"6636bda4a1fd7a63653dffb22683b8162c8de956"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 709aea2345270d1139c14176dfc88a7a.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'z0WmcvfU8OyvmTD8b96y7rLE97dAATFWoNOlaBwYwGTT5zBHJ8kZcQ=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,556 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/merges.txt "HTTP/1.1 307 Temporary Redirect"
+2026-11-05 23:39:37,556 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,556 : receive_response_body.complete
+2026-11-05 23:39:37,557 : response_closed.started
+2026-11-05 23:39:37,557 : response_closed.complete
+2026-11-05 23:39:37,557 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,558 : send_request_headers.complete
+2026-11-05 23:39:37,558 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,558 : send_request_body.complete
+2026-11-05 23:39:37,558 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,563 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'456356'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 25 Oct 2026 10:56:31 GMT'), (b'ETag', b'"6636bda4a1fd7a63653dffb22683b8162c8de956"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6adde05f-0654a48737d8d62b6f266779'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'merges.txt; filename="merges.txt";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'o86Dz2dkckeT3_PkDWcl_K2bIW9g782rA4JiUIWa8U0AubjU53FJyg=='), (b'Age', b'996185'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,563 : HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/merges.txt?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fmerges.txt=&etag=%226636bda4a1fd7a63653dffb22683b8162c8de956%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:37,563 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,563 : receive_response_body.complete
+2026-11-05 23:39:37,563 : response_closed.started
+2026-11-05 23:39:37,564 : response_closed.complete
+2026-11-05 23:39:37,564 : Attempting to acquire lock 139397692785264 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2026-11-05 23:39:37,564 : Lock 139397692785264 acquired on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2026-11-05 23:39:37,565 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:37,565 : send_request_headers.complete
+2026-11-05 23:39:37,565 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:37,566 : send_request_body.complete
+2026-11-05 23:39:37,566 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:37,792 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Wed, 04 Nov 2026 00:10:02 GMT'), (b'Content-Encoding', b'br'), (b'ETag', b'W/"6636bda4a1fd7a63653dffb22683b8162c8de956"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aea77da-44d6e7af3febd39731ffcc45;0f926bc1-5bad-43f7-ac9b-b06de91e6241'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'merges.txt; filename="merges.txt";'), (b'Vary', b'Origin,Accept-Encoding'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'BOTb9lkw9DveB5OSzBXkrwszhit0K0uM7oVwlxEVgyiSqWAt0QqiLg=='), (b'Age', b'170975'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:37,793 : HTTP Request: GET https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/merges.txt?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fmerges.txt=&etag=%226636bda4a1fd7a63653dffb22683b8162c8de956%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:37,795 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:37,807 : receive_response_body.complete
+2026-11-05 23:39:37,808 : response_closed.started
+2026-11-05 23:39:37,808 : response_closed.complete
+2026-11-05 23:39:37,809 : Attempting to release lock 139397692785264 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2026-11-05 23:39:37,809 : Lock 139397692785264 released on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2026-11-05 23:39:37,811 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,811 : send_request_headers.complete
+2026-11-05 23:39:37,811 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:37,811 : send_request_body.complete
+2026-11-05 23:39:37,811 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,038 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:37 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13b9-12ff8db007d730864037a7b7;195893f5-5884-42ee-a119-43d16667d121'), (b'RateLimit', b'"resolvers";r=2959;t=7'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'U1FBknkWwYcozlwgU9zdhtlDDd7dIDA_bjld-WDWMk_AbtElDm8KPQ=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:38,038 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/tokenizer.json "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:38,038 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,038 : receive_response_body.complete
+2026-11-05 23:39:38,038 : response_closed.started
+2026-11-05 23:39:38,039 : response_closed.complete
+2026-11-05 23:39:38,041 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,041 : send_request_headers.complete
+2026-11-05 23:39:38,041 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,041 : send_request_body.complete
+2026-11-05 23:39:38,041 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,278 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:38 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ba-47a50e67368d52ed4f326e07;d170b9c6-65cf-45d2-a7f7-2805e211e2ab'), (b'RateLimit', b'"resolvers";r=2958;t=6'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'jcya8Ae6LZcbGcHRagBKvG6POIJb5WPl3Lvb6Son_G0Kk0xJdzCZRg=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:38,278 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:38,278 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,278 : receive_response_body.complete
+2026-11-05 23:39:38,278 : response_closed.started
+2026-11-05 23:39:38,278 : response_closed.complete
+2026-11-05 23:39:38,280 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,281 : send_request_headers.complete
+2026-11-05 23:39:38,281 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,281 : send_request_body.complete
+2026-11-05 23:39:38,281 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,511 : receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'342'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:38 GMT'), (b'Location', b'/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/special_tokens_map.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fspecial_tokens_map.json=&etag=%222ea7ad0e45a9d1d1591782ba7e29a703d0758831%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ba-19f334db2e511aaa771ebf58;269d846b-65fc-4b91-9cdc-cff4521f0a66'), (b'RateLimit', b'"resolvers";r=2957;t=6'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'special_tokens_map.json; filename="special_tokens_map.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-Size', b'239'), (b'X-Linked-ETag', b'"2ea7ad0e45a9d1d1591782ba7e29a703d0758831"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'gH0GvveLtPwwUcu2I5Rgv6-G70eXg_eO63-InHqXd2HvbEGaPrlYtQ=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:38,512 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-05 23:39:38,512 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,513 : receive_response_body.complete
+2026-11-05 23:39:38,513 : response_closed.started
+2026-11-05 23:39:38,513 : response_closed.complete
+2026-11-05 23:39:38,513 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,514 : send_request_headers.complete
+2026-11-05 23:39:38,514 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,514 : send_request_body.complete
+2026-11-05 23:39:38,514 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,519 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'239'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 25 Oct 2026 10:56:34 GMT'), (b'ETag', b'"2ea7ad0e45a9d1d1591782ba7e29a703d0758831"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6adde062-5cacbf891368d92a3044a368'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'special_tokens_map.json; filename="special_tokens_map.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'uDTNg_Z0f4dI1HxrC2JPahmsL-_IghpRi-AMDOZsYszsLWUYvdsHZg=='), (b'Age', b'996184'), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:38,520 : HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/special_tokens_map.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fspecial_tokens_map.json=&etag=%222ea7ad0e45a9d1d1591782ba7e29a703d0758831%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:38,520 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,520 : receive_response_body.complete
+2026-11-05 23:39:38,520 : response_closed.started
+2026-11-05 23:39:38,520 : response_closed.complete
+2026-11-05 23:39:38,521 : Attempting to acquire lock 139397692785264 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2026-11-05 23:39:38,521 : Lock 139397692785264 acquired on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2026-11-05 23:39:38,522 : send_request_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:38,522 : send_request_headers.complete
+2026-11-05 23:39:38,522 : send_request_body.started request=<Request [b'GET']>
+2026-11-05 23:39:38,522 : send_request_body.complete
+2026-11-05 23:39:38,522 : receive_response_headers.started request=<Request [b'GET']>
+2026-11-05 23:39:38,774 : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'239'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:38 GMT'), (b'ETag', b'"2ea7ad0e45a9d1d1591782ba7e29a703d0758831"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ba-106cd24460d4bbf2551eda84;d9f96e84-f31c-4c0c-b408-8428612703c7'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'special_tokens_map.json; filename="special_tokens_map.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'kOP9oHAeOdGsPsgOsFU9TGp9DnqWsZLuPLTOmVgRZzJLZYDGrMkKAA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:38,774 : HTTP Request: GET https://huggingface.co/api/resolve-cache/models/princeton-nlp/unsup-simcse-roberta-base/db28710348cf9f33a2be25c505f98f0fbbbfe768/special_tokens_map.json?%2Fprinceton-nlp%2Funsup-simcse-roberta-base%2Fresolve%2Fdb28710348cf9f33a2be25c505f98f0fbbbfe768%2Fspecial_tokens_map.json=&etag=%222ea7ad0e45a9d1d1591782ba7e29a703d0758831%22 "HTTP/1.1 200 OK"
+2026-11-05 23:39:38,774 : receive_response_body.started request=<Request [b'GET']>
+2026-11-05 23:39:38,775 : receive_response_body.complete
+2026-11-05 23:39:38,775 : response_closed.started
+2026-11-05 23:39:38,775 : response_closed.complete
+2026-11-05 23:39:38,776 : Attempting to release lock 139397692785264 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2026-11-05 23:39:38,776 : Lock 139397692785264 released on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2026-11-05 23:39:38,777 : send_request_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,778 : send_request_headers.complete
+2026-11-05 23:39:38,778 : send_request_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:38,778 : send_request_body.complete
+2026-11-05 23:39:38,778 : receive_response_headers.started request=<Request [b'HEAD']>
+2026-11-05 23:39:39,014 : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 05 Nov 2026 23:39:38 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6aed13ba-2f01d4f177da0aa522b6fc14;42066367-df70-4f18-8bb4-faee47c9a8d3'), (b'RateLimit', b'"resolvers";r=2955;t=6'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy'), (b'X-Repo-Commit', b'db28710348cf9f33a2be25c505f98f0fbbbfe768'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 aa20aecedaf45504122399ad5b5c1de8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'SIN2-P7'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'rn2FxGHICd_LpG-TkaRXiGLHJwV3BAle2v6d0ePzSpk7fOOdIYYwzA=='), (b'Strict-Transport-Security', b'max-age=31536000')])
+2026-11-05 23:39:39,015 : HTTP Request: HEAD https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base/resolve/db28710348cf9f33a2be25c505f98f0fbbbfe768/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-11-05 23:39:39,015 : receive_response_body.started request=<Request [b'HEAD']>
+2026-11-05 23:39:39,015 : receive_response_body.complete
+2026-11-05 23:39:39,015 : response_closed.started
+2026-11-05 23:39:39,015 : response_closed.complete
+2026-11-05 23:39:39,900 : ***** Transfer task : STS12 *****
+
+
+2026-11-05 23:39:44,018 : MSRpar : pearson = 0.5772, spearman = 0.5925
+2026-11-05 23:39:45,542 : MSRvid : pearson = 0.8800, spearman = 0.8708
+2026-11-05 23:39:46,723 : Attempting to acquire lock 139397704592720 on /root/.cache/huggingface/hub/blobs/14/1445ca615a6b2ecb9cacf33e4d47548cb7354b4a4a05edd42c9c70645fbbd8a9.lock
+2026-11-05 23:39:46,723 : Lock 139397704592720 acquired on /root/.cache/huggingface/hub/blobs/14/1445ca615a6b2ecb9cacf33e4d47548cb7354b4a4a05edd42c9c70645fbbd8a9.lock
+2026-11-05 23:39:47,136 : SMTeuroparl : pearson = 0.5385, spearman = 0.6067
+2026-11-05 23:39:47,403 : Attempting to release lock 139397704592720 on /root/.cache/huggingface/hub/blobs/14/1445ca615a6b2ecb9cacf33e4d47548cb7354b4a4a05edd42c9c70645fbbd8a9.lock
+2026-11-05 23:39:47,403 : Lock 139397704592720 released on /root/.cache/huggingface/hub/blobs/14/1445ca615a6b2ecb9cacf33e4d47548cb7354b4a4a05edd42c9c70645fbbd8a9.lock
+2026-11-05 23:39:47,404 : Attempting to release lock 139397661814960 on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/04c2f65f8eb4f52a5a3c7231816cd1409a4e5b08f8a3257e19f6096eb49dec05.lock
+2026-11-05 23:39:47,404 : Lock 139397661814960 released on /root/.cache/huggingface/hub/.locks/models--princeton-nlp--unsup-simcse-roberta-base/04c2f65f8eb4f52a5a3c7231816cd1409a4e5b08f8a3257e19f6096eb49dec05.lock
+2026-11-05 23:39:49,377 : surprise.OnWN : pearson = 0.7582, spearman = 0.7207
+2026-11-05 23:39:50,623 : surprise.SMTnews : pearson = 0.6854, spearman = 0.5939
+2026-11-05 23:39:50,626 : ALL : Pearson = 0.7686,             Spearman = 0.7015
+2026-11-05 23:39:50,626 : ALL (weighted average) : Pearson = 0.7021,             Spearman = 0.6929
+2026-11-05 23:39:50,626 : ALL (average) : Pearson = 0.6879,             Spearman = 0.6769
+
+2026-11-05 23:39:50,629 : ***** Transfer task : STS13 (-SMT) *****
+
+
+2026-11-05 23:39:51,797 : FNWN : pearson = 0.6330, spearman = 0.6470
+2026-11-05 23:39:53,747 : headlines : pearson = 0.7792, spearman = 0.7757
+2026-11-05 23:39:55,020 : OnWN : pearson = 0.8683, spearman = 0.8440
+2026-11-05 23:39:55,022 : ALL : Pearson = 0.8161,             Spearman = 0.8177
+2026-11-05 23:39:55,022 : ALL (weighted average) : Pearson = 0.7941,             Spearman = 0.7850
+2026-11-05 23:39:55,022 : ALL (average) : Pearson = 0.7602,             Spearman = 0.7556
+
+2026-11-05 23:39:55,024 : ***** Transfer task : STS14 *****
+
+
+2026-11-05 23:39:56,298 : deft-forum : pearson = 0.5496, spearman = 0.5393
+2026-11-05 23:39:57,877 : deft-news : pearson = 0.7917, spearman = 0.7360
+2026-11-05 23:40:00,074 : headlines : pearson = 0.7652, spearman = 0.7318
+2026-11-05 23:40:02,032 : images : pearson = 0.8507, spearman = 0.8156
+2026-11-05 23:40:04,100 : OnWN : pearson = 0.8783, spearman = 0.8561
+2026-11-05 23:40:06,887 : tweet-news : pearson = 0.7522, spearman = 0.6857
+2026-11-05 23:40:06,890 : ALL : Pearson = 0.7785,             Spearman = 0.7324
+2026-11-05 23:40:06,890 : ALL (weighted average) : Pearson = 0.7786,             Spearman = 0.7415
+2026-11-05 23:40:06,890 : ALL (average) : Pearson = 0.7646,             Spearman = 0.7274
+
+2026-11-05 23:40:06,894 : ***** Transfer task : STS15 *****
+
+
+2026-11-05 23:40:08,824 : answers-forums : pearson = 0.7301, spearman = 0.7357
+2026-11-05 23:40:10,859 : answers-students : pearson = 0.7393, spearman = 0.7442
+2026-11-05 23:40:12,962 : belief : pearson = 0.7963, spearman = 0.7944
+2026-11-05 23:40:15,410 : headlines : pearson = 0.8118, spearman = 0.8118
+2026-11-05 23:40:17,555 : images : pearson = 0.8800, spearman = 0.8880
+2026-11-05 23:40:17,558 : ALL : Pearson = 0.8085,             Spearman = 0.8135
+2026-11-05 23:40:17,558 : ALL (weighted average) : Pearson = 0.7986,             Spearman = 0.8023
+2026-11-05 23:40:17,558 : ALL (average) : Pearson = 0.7915,             Spearman = 0.7948
+
+2026-11-05 23:40:17,562 : ***** Transfer task : STS16 *****
+
+
+2026-11-05 23:40:18,638 : answer-answer : pearson = 0.7527, spearman = 0.7549
+2026-11-05 23:40:19,257 : headlines : pearson = 0.8024, spearman = 0.8140
+2026-11-05 23:40:20,134 : plagiarism : pearson = 0.8409, spearman = 0.8494
+2026-11-05 23:40:21,755 : postediting : pearson = 0.8462, spearman = 0.8580
+2026-11-05 23:40:22,366 : question-question : pearson = 0.7598, spearman = 0.7595
+2026-11-05 23:40:22,368 : ALL : Pearson = 0.7987,             Spearman = 0.8065
+2026-11-05 23:40:22,368 : ALL (weighted average) : Pearson = 0.8007,             Spearman = 0.8076
+2026-11-05 23:40:22,368 : ALL (average) : Pearson = 0.8004,             Spearman = 0.8071
+
+2026-11-05 23:40:22,370 : 
+
+***** Transfer task : STSBenchmark*****
+
+
+2026-11-05 23:40:43,766 : train : pearson = 0.8054, spearman = 0.7777
+2026-11-05 23:40:49,696 : dev : pearson = 0.8385, spearman = 0.8391
+2026-11-05 23:40:54,618 : test : pearson = 0.8117, spearman = 0.8022
+2026-11-05 23:40:54,623 : ALL : Pearson = 0.8134,             Spearman = 0.7963
+2026-11-05 23:40:54,623 : ALL (weighted average) : Pearson = 0.8122,             Spearman = 0.7923
+2026-11-05 23:40:54,623 : ALL (average) : Pearson = 0.8186,             Spearman = 0.8063
+
+2026-11-05 23:40:54,629 : 
+
+***** Transfer task : SICKRelatedness*****
+
+
+2026-11-05 23:41:07,093 : train : pearson = 0.7760, spearman = 0.6909
+2026-11-05 23:41:08,659 : dev : pearson = 0.7761, spearman = 0.7118
+2026-11-05 23:41:22,565 : test : pearson = 0.7675, spearman = 0.6856
+2026-11-05 23:41:22,571 : ALL : Pearson = 0.7718,             Spearman = 0.6893
+2026-11-05 23:41:22,571 : ALL (weighted average) : Pearson = 0.7718,             Spearman = 0.6893
+2026-11-05 23:41:22,571 : ALL (average) : Pearson = 0.7732,             Spearman = 0.6961
+
+------ test ------
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| 70.15 | 81.77 | 73.24 | 81.35 | 80.65 |    80.22     |      68.56      | 76.56 |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
++------+------+------+------+------+------+------+------+
+|  MR  |  CR  | SUBJ | MPQA | SST2 | TREC | MRPC | Avg. |
++------+------+------+------+------+------+------+------+
+| 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
++------+------+------+------+------+------+------+------+
+2026-11-05 23:41:22,611 : close.started
+2026-11-05 23:41:22,611 : close.complete
+2026-11-05 23:41:22,612 : close.started
+2026-11-05 23:41:22,612 : close.complete
