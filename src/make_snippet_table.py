@@ -65,7 +65,7 @@ def main():
         for _, r in g.iterrows():
             rows.append(f"{band} & {esc(fix_text(r.sentence1))} & {esc(fix_text(r.sentence2))} & {r.gold:.2f} \\\\")
     body = "\n".join(rows)
-    tex = ("\\setlength{\\tabcolsep}{3pt}\n\\begin{tabular}{p{1.0cm}>{\\raggedright\\arraybackslash}p{2.4cm}>{\\raggedright\\arraybackslash}p{2.4cm}r}\n\\toprule\nBand & Sentence 1 & Sentence 2 & Gold \\\\\n"
+    tex = ("\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{@{}p{1.3cm}>{\\raggedright\\arraybackslash}p{6.3cm}>{\\raggedright\\arraybackslash}p{6.3cm}r@{}}\n\\toprule\nBand & Sentence 1 & Sentence 2 & Gold \\\\\n"
            "\\midrule\n" + body + "\n\\bottomrule\n\\end{tabular}\n")
     open(a.out, "w", encoding="utf-8").write(tex)
     print(tex)
