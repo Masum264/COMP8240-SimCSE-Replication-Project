@@ -11,16 +11,19 @@ SimCSE with an LLM-as-judge.
 | `src/replicate_sts.sh` | clones the authors' code, applies one compatibility patch, evaluates 4 released checkpoints |
 | `src/parse_replication.py` | compares our numbers with Table 5 of the paper |
 | `src/transfer_existing_datasets.py` | SimCSE on Quora, BIOSSES, CodeSearchNet, Amazon, CUAD |
-| `src/build_dataset.py` | how the candidate pairs were built from five MIT OCW syllabi |
+| `src/build_dataset.py`, `src/new_sources.py`, `src/extend_dataset.py` | how the 100 distinct candidate pairs were built from thirteen MIT OCW syllabi (batch 1: five syllabi, batch 2: eight more) |
+| `src/append_ratings.py` | merges the second batch of ratings into the rating files |
 | `src/export_annotation_sheet.py`, `src/agreement.py` | blind rating sheet for extra raters; agreement statistics |
+| `src/extra_analysis.py`, `src/clean_subset.py` | paired bootstrap, leave-one-out rater comparison, personal-information screen (`data/row_flags.csv`) |
+| `src/make_snippet_table.py`, `src/make_original_snippets.py`, `src/make_figures.py` | LaTeX snippet tables and the scatter figure used in the report |
 | `src/make_eval_sets.py`, `src/simcse_scores.py`, `src/llm_judge.py`, `src/analysis.py` | evaluation sets, scores, final tables |
 | `data/` | `raw_texts.json`, `candidate_pairs.csv`, `annotations.csv`, rater files, `eval/` (see `data/README.md`) |
 | `docs/` | annotation guidelines, information sheet for raters |
 | `results/` | all generated outputs and tables used in the report |
 
 ## Environment
-Developed on Google Colab (GPU runtime). Record your own versions after a successful run:
-`pip freeze > environment_freeze.txt` and commit it.
+Developed on Google Colab with an NVIDIA T4 GPU: Python 3.13.16, PyTorch 2.14.1 (CUDA 13.0 build),
+`transformers` 5.22.1, `scikit-learn` 1.6.1, `scipy` 1.16.3.
 ```
 pip install -r requirements.txt
 ```
@@ -35,7 +38,11 @@ All sampling uses fixed seeds. LLM-judge outputs are deterministic for the local
 Quick pipeline test without a GPU: `python src/llm_judge.py --backend dummy ...`.
 
 ## Data and licences
-See `data/README.md`. Source texts keep their original licences; check each source before reuse.
+See `data/README.md` (datasheet). The new dataset's sentences come from MIT OpenCourseWare syllabus pages, which
+state CC BY-NC-SA 4.0. The text is released with attribution to MIT OpenCourseWare, under the same licence, for
+non-commercial use only. `data/row_flags.csv` marks 29 rows with likely person names or reference lines. To request
+removal of a row, open an issue on this repository. The existing datasets (Quora, BIOSSES, CodeSearchNet, Amazon, CUAD,
+and the STS-B sample) are not copied here: the scripts download them from their public sources.
 
 ## Citation
 Gao, T., Yao, X., & Chen, D. (2021). SimCSE: Simple Contrastive Learning of Sentence Embeddings. EMNLP 2021.
