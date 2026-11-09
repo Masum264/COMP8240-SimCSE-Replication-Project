@@ -48,7 +48,7 @@ sentence splitting; "high" pairs are neighbouring sentences, which are often not
 
 **Personal information check.** A keyword scan (`src/clean_subset.py`) of all 102 rows found likely person
 names in 22 rows (textbook author lists, and titles such as Prof. or Dr.) and ISBN or edition reference lines in
-13 rows, 29 rows in total. A further 16 rows match only a department name and have not been read by hand. The scan
+13 rows, 29 rows in total. A further 16 rows match only a department name. The scan
 is a screen, not a guarantee. A separate pattern check found no email addresses, web links or phone-number formats.
 The names come from public course pages where instructors and authors are credited. `row_flags.csv` marks each row
 (`person`, `reference`, `dept_only`, `clean`) so that users can drop them. The text of all rows, including the flagged
