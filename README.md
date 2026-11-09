@@ -32,10 +32,27 @@ current Python. `src/replicate_sts.sh` therefore uses current packages and makes
 `tokenizer.batch_encode_plus(` -> `tokenizer(` in `evaluation.py` (the method was removed).
 
 ## Reproduce
-Run `run_all.sh` from the repository root, or each step separately (see comments in that file).
-All sampling uses fixed seeds. LLM-judge outputs are deterministic for the local backend
-(`results/llm/*.csv.meta.json` records model, prompt hash and date).
-Quick pipeline test without a GPU: `python src/llm_judge.py --backend dummy ...`.
+Tested on Google Colab with a T4 GPU.
+
+1. Open a Colab notebook and choose Runtime > Change runtime type > T4 GPU.
+2. Clone the repo and install the packages:
+```
+!git clone https://github.com/Masum264/COMP8240-SimCSE-Replication-Project
+%cd COMP8240-SimCSE-Replication-Project
+!pip install -q -r requirements.txt bitsandbytes
+```
+3. Quick check, no GPU needed (a few minutes). Expected: mean Spearman 0.729, QWK 0.690, alpha 0.652.
+```
+%env PYTHONPATH=src
+!python src/agreement.py --others data/rater2.csv data/rater3.csv --blind_from 30
+!python src/analysis.py
+```
+4. Full pipeline (replication, five existing datasets, SimCSE and judge scores, tables):
+```
+!bash run_all.sh
+```
+
+All sampling uses fixed seeds. LLM-judge outputs are deterministic for the local backend (`results/llm/*.csv.meta.json` records model, prompt hash and date). Pipeline test without a GPU: `python src/llm_judge.py --backend dummy ...`
 
 ## Data and licences
 See `data/README.md` (datasheet). The new dataset's sentences come from MIT OpenCourseWare syllabus pages, which
