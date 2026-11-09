@@ -84,9 +84,9 @@ def main():
             continue
         rows.append(f"{name} & {esc(hit[0])} & {esc(hit[1])} & {hit[2]:.1f} \\\\")
     tex = ("\\setlength{\\tabcolsep}{4pt}\n"
-           "\\begin{tabular}{@{}p{1.4cm}>{\\raggedright\\arraybackslash}p{6.2cm}>{\\raggedright\\arraybackslash}p{6.2cm}r@{}}\n"
+           "\\begin{tabularx}{\\textwidth}{@{}l>{\\raggedright\\arraybackslash}X>{\\raggedright\\arraybackslash}Xr@{}}\n"
            "\\toprule\nSet & Sentence 1 & Sentence 2 & Gold \\\\\n\\midrule\n" + "\n".join(rows) +
-           "\n\\bottomrule\n\\end{tabular}\n")
+           "\n\\bottomrule\n\\end{tabularx}\n")
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
     open(a.out, "w", encoding="utf-8").write(tex)
     print(tex)
