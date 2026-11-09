@@ -15,7 +15,7 @@ SimCSE with an LLM-as-judge.
 | `src/append_ratings.py` | merges the second batch of ratings into the rating files |
 | `src/export_annotation_sheet.py`, `src/agreement.py` | blind rating sheet for extra raters; agreement statistics |
 | `src/extra_analysis.py`, `src/clean_subset.py` | paired bootstrap, leave-one-out rater comparison, personal-information screen (`data/row_flags.csv`) |
-| `src/make_snippet_table.py`, `src/make_original_snippets.py`, `src/make_figures.py` | LaTeX snippet tables and the scatter figure used in the report |
+| `src/make_snippet_table.py`, `src/make_original_snippets.py`, `src/make_existing_snippets.py`, `src/make_figures.py` | LaTeX snippet tables and the scatter figure used in the report |
 | `src/make_eval_sets.py`, `src/simcse_scores.py`, `src/llm_judge.py`, `src/analysis.py` | evaluation sets, scores, final tables |
 | `data/` | `raw_texts.json`, `candidate_pairs.csv`, `annotations.csv`, rater files, `eval/` (see `data/README.md`) |
 | `docs/` | annotation guidelines, information sheet for raters |
