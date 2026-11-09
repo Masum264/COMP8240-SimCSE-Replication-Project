@@ -25,4 +25,4 @@ Illustrative examples (invented for these guidelines; not from the dataset)
 - "The course covers sorting algorithms." / "Enzymes lower the activation energy of reactions." -> 0
 
 The scale is adapted from the 0-4 similarity scales used in semantic-textual-similarity datasets
-such as BIOSSES (check that paper before citing it).
+such as BIOSSES.
